@@ -617,17 +617,29 @@ margin-top: 1.2rem;
     }
 
     aside {
+ 
         
         position: fixed;
-        /* left: -100; */
+        left: -100;
         background: var(--color-white);        
         width: 18rem;
         z-index: 3;
         box-shadow: 1rem 3rem 4rem var(--color-light);
-        height: 100vh;
-        padding-right: var(--card-padding);   
         display: none;
-        animation: showMenu 500ms ease forwards;     
+        animation: showMenu 500ms ease forwards;
+        padding-right: var(--padding-1);
+    }
+
+    aside::-webkit-scrollbar {
+        width: 0.75rem;
+    }
+    
+    aside::-webkit-scrollbar-track {
+        background: var(--color-backgournd);
+    }
+    
+    aside::-webkit-scrollbar-thumb {
+        background: var(--color-primary);
     }
 
     @keyframes showMenu {
@@ -655,8 +667,7 @@ margin-top: 1.2rem;
 
     aside .sidebar a:last-child {
         position: absolute;
-        margin-top: auto;
-         
+        margin-top: 10rem;              
     } 
 
     aside .close {
